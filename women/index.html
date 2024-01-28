@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women - RainyDays</title>
+    <meta name="description" content="Have a look at our clothes for women." />
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+    <link href="/css/style.css?v=1" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/icon" href="/images/favicon.ico" />
+    <script src="/js/app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/2f7002576b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="branding">
+          <a href="/" title="RainyDays">
+            <img class="logo" src="/images/logo.png" alt="RainyDays logo" />
+          </a>
+        </div>
+        <input type="checkbox" id="menu-checkbox" />
+        <div class="navigation-collapse" id="navigationCollapse">
+          <ul class="navigation-elements">
+            <li>
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li>
+              <a class="nav-link active" href="/women/">Women</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/men/">Men</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contact/">Contact</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/about/">About</a>
+            </li>
+          </ul>
+        </div>
+        <a href="/checkout/" class="nav-cart" title="Go to cart">
+          <div class="cart-icon">
+            <i class="fa fa-cart-shopping"></i>
+            <span class="cart-count">2</span>
+          </div>
+        </a>
+        <label for="menu-checkbox" class="navigation-toggler">
+          <i class="fa fa-bars"></i>
+          <span class="hidden">Menu</span>
+        </label>
+      </nav>
+    </header>
+    <main>
+      <nav id="breadcrumbs" class="breadcrumbs-container">
+        <a href="/">Home</a>
+        /
+        <a href="/women/">Women</a>
+      </nav>
+      <section id="products" class="products-section">
+        <h1 class="page-title">Women's jackets</h1>
+        <div id="loading-products" class="loading">
+          <i class="fa fa-spinner fa-spin"></i><br />
+          Loading products...
+        </div>
+        <div id="message-container"></div>
+        <div id="product-container" class="product-grid"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <span class="copyright">&copy; 2023 RainyDays</span>
+        <span class="footer-decoration">|</span>
+        <a href="/about/" class="footer-link">About</a>
+        <a href="/contact/" class="footer-link">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
