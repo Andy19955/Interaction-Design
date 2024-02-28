@@ -52,12 +52,17 @@ p {
 .message {
   margin: 0 auto;
   width: fit-content;
+  padding: 10px;
 }
 
 .error {
   border: 1px solid red;
-  padding: 10px;
   background-color: pink;
+}
+
+.success {
+  border: 1px solid green;
+  background-color: lightgreen;
 }
 
 /* Header */
