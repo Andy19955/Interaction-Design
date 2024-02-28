@@ -1,6 +1,7 @@
 import { handleNewProductsDisplay } from "./handlers/handleNewProductsDisplay.js";
 import { handleProductsDisplay } from "./handlers/handleProductsDisplay.js";
 import { handleSingleProductDisplay } from "./handlers/handleSingleProductDisplay.js";
+import { handleContactForm } from "./handlers/handleContactForm.js";
 
 function router() {
   const path = window.location.pathname;
@@ -18,6 +19,8 @@ function router() {
       break;
     case "/product/":
       handleSingleProductDisplay();
+    case "/contact/":
+      handleContactForm();
   }
 }
 

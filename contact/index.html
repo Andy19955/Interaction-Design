@@ -10,6 +10,7 @@
     <link href="/css/style.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/icon" href="/images/favicon.ico" />
     <script src="https://kit.fontawesome.com/2f7002576b.js" crossorigin="anonymous"></script>
+    <script src="/js/app.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -64,7 +65,7 @@
         <h2>Send us a message</h2>
         <p>Fill in the form below if you wish to contact us. We will normally respond within 1-2 working days. During busy periods, the response time may be somewhat longer.</p>
         <div class="form-container">
-          <form action="#" method="post">
+          <form id="contact-form" action="">
             <div class="form-row">
               <div class="form-group">
                 <label for="name" class="form-label">Full name</label>
@@ -86,9 +87,10 @@
               </div>
             </div>
             <div class="form-row">
-              <button type="submit" class="form-btn" name="send">Send message</button>
+              <button type="submit" id="submit-btn" class="form-btn" name="send">Send message</button>
             </div>
           </form>
+          <div id="message-container"></div>
         </div>
       </section>
     </main>
