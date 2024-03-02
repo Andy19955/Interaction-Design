@@ -435,13 +435,12 @@ textarea.form-input {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
 }
 
 .product-details .product-size-selector {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 15px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
 }
 
 .product-details .product-size-box {
