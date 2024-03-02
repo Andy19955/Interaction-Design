@@ -19,8 +19,10 @@ function router() {
       break;
     case "/product/":
       handleSingleProductDisplay();
+      break;
     case "/contact/":
       handleContactForm();
+      break;
   }
 }
 
