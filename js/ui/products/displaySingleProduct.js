@@ -7,6 +7,7 @@ export function displaySingleProduct(product) {
   const productTitle = document.querySelector("#product-title");
   const productPrice = document.querySelector("#product-price");
   const productDescription = document.querySelector("#product-description");
+  // const productSizeSelector = document.querySelector("#product-size-selector");
   const productSizeSelector = document.querySelector("#product-size-selector");
 
   document.title = `${product.title} - RainyDays`;
@@ -33,10 +34,10 @@ export function displaySingleProduct(product) {
   product.sizes.forEach(createSizeBox);
 
   function createSizeBox(size) {
-    const sizeBox = document.createElement("div");
-    sizeBox.classList.add("product-size-box");
-    sizeBox.innerText = size;
-    productSizeSelector.append(sizeBox);
+    const sizeOption = document.createElement("option");
+    sizeOption.innerText = size;
+    sizeOption.value = size;
+    productSizeSelector.append(sizeOption);
   }
 
   productPage.classList.add("product-page");
