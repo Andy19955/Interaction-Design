@@ -10,6 +10,7 @@
     <link href="/css/style.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/icon" href="/images/favicon.ico" />
     <script src="https://kit.fontawesome.com/2f7002576b.js" crossorigin="anonymous"></script>
+    <script src="/js/app.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -40,9 +41,8 @@
           </ul>
         </div>
         <a href="/checkout/" class="nav-cart" title="Go to cart">
-          <div class="cart-icon">
+          <div id="cart-counter" class="cart-icon">
             <i class="fa fa-cart-shopping"></i>
-            <span class="cart-count">2</span>
           </div>
         </a>
         <label for="menu-checkbox" class="navigation-toggler"><i class="fa fa-bars"></i><span class="hidden">Menu</span></label>

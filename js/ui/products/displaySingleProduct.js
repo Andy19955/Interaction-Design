@@ -1,14 +1,15 @@
+import { addToCart } from "../../handlers/handleAddToCart.js";
+
 export function displaySingleProduct(product) {
   const productPage = document.querySelector("#product");
-  const loading = document.querySelector("#loading-product");
   const productImage = document.querySelector("#product-image");
   const productBreadcrumb = document.querySelector("#product-breadcrumb");
   const genderBreadcrumb = document.querySelector("#gender-breadcrumb");
   const productTitle = document.querySelector("#product-title");
   const productPrice = document.querySelector("#product-price");
   const productDescription = document.querySelector("#product-description");
-  // const productSizeSelector = document.querySelector("#product-size-selector");
   const productSizeSelector = document.querySelector("#product-size-selector");
+  const addToCartButton = document.querySelector("#add-to-cart");
 
   document.title = `${product.title} - RainyDays`;
 
@@ -39,6 +40,13 @@ export function displaySingleProduct(product) {
     sizeOption.value = size;
     productSizeSelector.append(sizeOption);
   }
+
+  addToCartButton.dataset.id = product.id;
+  addToCartButton.dataset.title = product.title;
+  addToCartButton.dataset.price = product.price;
+  addToCartButton.dataset.image = product.image;
+
+  addToCartButton.addEventListener("click", addToCart);
 
   productPage.classList.add("product-page");
   productPage.classList.remove("hidden");

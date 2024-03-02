@@ -10,6 +10,7 @@
     <link href="/css/style.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/icon" href="/images/favicon.ico" />
     <script src="https://kit.fontawesome.com/2f7002576b.js" crossorigin="anonymous"></script>
+    <script src="/js/app.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -40,9 +41,8 @@
           </ul>
         </div>
         <a href="/checkout/" class="nav-cart" title="Go to cart">
-          <div class="cart-icon">
+          <div id="cart-counter" class="cart-icon">
             <i class="fa fa-cart-shopping"></i>
-            <span class="cart-count">2</span>
           </div>
         </a>
         <label for="menu-checkbox" class="navigation-toggler">
@@ -64,75 +64,22 @@
             <div class="order-details-row order-details-header">
               <div class="order-details-title">Product</div>
               <div class="order-details-title"></div>
-              <div class="order-details-title">Amount</div>
+              <div class="order-details-title">Quantity</div>
               <div class="order-details-title">Total</div>
             </div>
-            <div class="order-details-row">
-              <div class="order-details-element">
-                <div class="order-image">
-                  <!-- <img src="../images/jacket1-small.jpg" alt="Jacket 1" /> -->
-                  No image
-                </div>
-              </div>
-              <div class="order-details-element">
-                <div class="order-info">
-                  <span class="product-title"> Jacket 1 </span>
-                  <span class="product-price"> $ 109 </span>
-                  <span class="product-size"> Size: L </span>
-                </div>
-              </div>
-              <div class="order-details-element">
-                <div class="order-amount">
-                  <div class="counter-box">
-                    <span class="counter-box-element"> - </span>
-                    <span class="counter-box-number">1</span>
-                    <span class="counter-box-element"> + </span>
-                  </div>
-                </div>
-              </div>
-              <div class="order-details-element">
-                <div class="order-price">$ 109</div>
-              </div>
-            </div>
-            <div class="order-details-row">
-              <div class="order-details-element">
-                <div class="order-image">
-                  <!-- <img src="../images/jacket3-small.jpg" alt="Jacket 3" /> -->
-                  No image
-                </div>
-              </div>
-              <div class="order-details-element">
-                <div class="order-info">
-                  <span class="product-title"> Jacket 3 </span>
-                  <span class="product-price"> $ 79 </span>
-                  <span class="product-size"> Size: L </span>
-                </div>
-              </div>
-              <div class="order-details-element">
-                <div class="order-amount">
-                  <div class="counter-box">
-                    <span class="counter-box-element"> - </span>
-                    <span class="counter-box-number">1</span>
-                    <span class="counter-box-element"> + </span>
-                  </div>
-                </div>
-              </div>
-              <div class="order-details-element">
-                <div class="order-price">$ 79</div>
-              </div>
-            </div>
+            <div id="cart"></div>
             <div class="order-details-footer">
               <div class="order-details-element"></div>
               <div class="order-details-element"></div>
               <div class="order-details-element"></div>
-              <div class="order-details-element">Total: $ 199</div>
+              <div id="cart-total" class="order-details-element"></div>
             </div>
           </div>
         </div>
-        <div class="payment-details">
+        <div id="shipping-form" class="payment-details">
           <h1 class="page-title">Payment details</h1>
           <div class="form-container">
-            <form action="#" method="post">
+            <form id="order-form" action="">
               <div class="form-row">
                 <div class="form-group">
                   <label for="name" class="form-label">Full name</label>
@@ -153,8 +100,12 @@
                   <input type="text" id="card" class="form-input" placeholder="xxxx xxxx xxxx xxxx" required />
                 </div>
                 <div class="form-group">
-                  <label for="card-expiry" class="form-label">Expiry date</label>
-                  <input type="text" id="card-expiry" class="form-input" placeholder="MM/YY" required />
+                  <label for="card-expiry" class="form-label">Expiry month</label>
+                  <input type="text" id="card-expiry" class="form-input" placeholder="MM" required />
+                </div>
+                <div class="form-group">
+                  <label for="card-expiry-year" class="form-label">Expiry year</label>
+                  <input type="text" id="card-expiry-year" class="form-input" placeholder="YYYY" required />
                 </div>
                 <div class="form-group">
                   <label for="cvv" class="form-label">CVV</label>
@@ -162,7 +113,7 @@
                 </div>
               </div>
               <div class="form-row">
-                <a href="/checkout-success/" class="form-btn">Place order</a>
+                <button type="submit" id="submit-order-btn" class="form-btn">Place order</button>
               </div>
             </form>
           </div>
